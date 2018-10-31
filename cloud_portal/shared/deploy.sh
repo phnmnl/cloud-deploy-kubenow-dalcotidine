@@ -143,7 +143,7 @@ elif [ "$PROVIDER" = "openstack" ]; then
      unzip -o netifaces_wheelhouse.zip
      virtualenv deploy
      source deploy/bin/activate
-     pip install -U pip
+     pip install --upgrade pip==9.0.3
      pip install --no-index --find-links=netifaces_wheelhouse netifaces
      pip install -r "$PORTAL_APP_REPO_FOLDER/requirements_glance.txt" --no-deps
      # print version
